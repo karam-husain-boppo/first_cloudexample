@@ -1,0 +1,25 @@
+package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class FirstCloudExampleApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(FirstCloudExampleApplication.class, args);
+	}
+@Bean
+public Function<String,String>function(){
+	return input->input;
+}
+@Bean
+public Consumer<String>consume(){
+	return input-> System.out.println("inputs:"+input);
+}
+@Bean
+public Supplier<String>supply(){
+	return ()->"Hello World";
+}
+
+}
