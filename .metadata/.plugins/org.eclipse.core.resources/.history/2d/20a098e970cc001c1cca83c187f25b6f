@@ -1,0 +1,12 @@
+package com.example.demo.dao;
+
+import java.util.function.Consumer;
+
+import jdk.internal.org.jline.utils.Log;
+
+public class MyConsumer implements Consumer<String> {
+@Override
+public void accept(String s) {
+	Log.info("Received: "+s);
+}
+}

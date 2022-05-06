@@ -1,0 +1,17 @@
+package com.example.demo;
+
+import java.util.function.Consumer;
+import jdk.internal.util.jar.JarIndex;
+import org.springframework.stereotype.Component;
+
+import jdk.internal.org.jline.utils.Log;
+import lombok.extern.slf4j.Slf4j;
+
+@Component
+@Slf4j
+public class MyConsumer implements Consumer<String> {
+@Override
+public void accept(String s) {
+	Log.info("Received: "+s);
+}
+}

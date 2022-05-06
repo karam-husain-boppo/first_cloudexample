@@ -1,0 +1,1 @@
+spring.cloud.function.scan.package:com.example.demo.dao
